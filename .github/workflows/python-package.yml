@@ -27,6 +27,8 @@ jobs:
     - uses: yezz123/setup-uv@v4 
       with:
         uv-version: "0.9.3"
+    - name: Install system dependencies
+      run: sudo apt-get update && sudo apt-get install -y poppler-utils
     - name: Install dependencies
       run: make install
     - name: Lint with Ruff
