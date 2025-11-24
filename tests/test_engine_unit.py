@@ -480,9 +480,7 @@ class TestProcess:
         assert result == "<hocr>test</hocr>"
         mock_create.assert_not_called()  # Should not create new reader
 
-    def test_process_recreates_reader_different_language(
-        self, mocker: Any, tmp_path: Path
-    ) -> None:
+    def test_process_recreates_reader_different_language(self, mocker: Any, tmp_path: Path) -> None:
         """Test process recreates reader when languages change."""
         engine = EasyOCREngine()
 

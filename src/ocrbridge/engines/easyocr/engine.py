@@ -23,7 +23,6 @@ EasyOCRResult = tuple[BoundingBox, str, float]
 EasyOCRResults = list[EasyOCRResult]
 
 
-
 def detect_gpu_availability() -> bool:
     """Detect if CUDA GPU is available for EasyOCR.
 
@@ -121,9 +120,7 @@ class EasyOCREngine(OCREngine):
 
         return reader
 
-    def process(
-        self, file_path: Path, params: OCREngineParams | None = None
-    ) -> str:
+    def process(self, file_path: Path, params: OCREngineParams | None = None) -> str:
         """Process document with EasyOCR and return HOCR XML.
 
         Args:

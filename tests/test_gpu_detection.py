@@ -40,6 +40,7 @@ class TestDetectGPUAvailability:
 
     def test_torch_not_installed(self, mocker: Any) -> None:
         """Test detect_gpu_availability returns False when torch not installed."""
+
         # Mock ImportError when trying to import torch
         def raise_import_error(*args: Any, **kwargs: Any) -> None:
             raise ImportError("No module named 'torch'")
@@ -51,6 +52,7 @@ class TestDetectGPUAvailability:
 
     def test_torch_import_exception(self, mocker: Any) -> None:
         """Test detect_gpu_availability returns False on unexpected exception."""
+
         # Mock an unexpected exception during torch import
         def raise_exception(*args: Any, **kwargs: Any) -> None:
             if args[0] == "torch":

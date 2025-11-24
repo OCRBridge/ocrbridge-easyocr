@@ -28,8 +28,7 @@ class TestEntryPoint:
         entry_names = [ep.name for ep in engine_list]
 
         assert "easyocr" in entry_names, (
-            f"Entry point 'easyocr' not found in ocrbridge.engines. "
-            f"Found: {entry_names}"
+            f"Entry point 'easyocr' not found in ocrbridge.engines. Found: {entry_names}"
         )
 
     def test_entry_point_loads_correct_class(self) -> None:
