@@ -6,7 +6,6 @@ This module handles the conversion of EasyOCR's native output format
 
 from typing import Sequence, TypedDict
 
-
 Point2D = tuple[float, float]
 BBox = tuple[int, int, int, int]
 
